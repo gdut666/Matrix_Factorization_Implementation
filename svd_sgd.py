@@ -103,7 +103,11 @@ class SVD(object):
         x = range(1, self.number_epochs + 1)
         plt.plot(x, rmse_list)
         # plt.xticks(x)
+        plt.title('SVD_SGD')
+        plt.xlabel('epoch')
+        plt.ylabel('RMSE')
         plt.show()
+
         return P, Q
 
 if __name__ == '__main__':

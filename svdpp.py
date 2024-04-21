@@ -157,7 +157,9 @@ class BiasSvd(object):
 
         x = range(1, self.number_epochs + 1)
         plt.plot(x, rmse_list)
-        plt.xticks(x)
+        plt.title('SVDpp_SGD')
+        plt.xlabel('epoch')
+        plt.ylabel('RMSE')
         plt.show()
         return P, Q, bu, bi, Y
 
@@ -165,7 +167,7 @@ if __name__ == '__main__':
     trainset = pd.read_csv('ml-100k/u1.base', sep='\t', names=["userId", "movieId", "rating"], usecols=range(3))
     valset = pd.read_csv('ml-100k/u1.test', sep='\t', names=["userId", "movieId", "rating"], usecols=range(3))
 
-    algo = BiasSvd(0.01, 0.01, 0.01, 0.01, 0.01, 2, 20)
+    algo = BiasSvd(0.01, 0.01, 0.01, 0.01, 0.01, 1, 40)
     algo.fit(trainset, valset)
 
     # print(trainset[trainset["userId"] == 1])

@@ -131,7 +131,9 @@ class BiasSvd(object):
 
         x = range(1, self.number_epochs + 1)
         plt.plot(x, rmse_list)
-        plt.xticks(x)
+        plt.title('BIAS_SVD_SGD')
+        plt.xlabel('epoch')
+        plt.ylabel('RMSE')
         plt.show()
         return P, Q, bu, bi
 

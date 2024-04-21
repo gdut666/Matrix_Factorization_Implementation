@@ -1,4 +1,4 @@
-# Download the dataset and package needed and RUN
+# Download the ml-100k dataset and package needed and RUN
 # make sure that your directory struture looks like this:
 ```
 ----root
